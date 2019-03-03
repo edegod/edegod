@@ -145,12 +145,20 @@
 </nav>
 
         <div id="main">
-            <div class="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2></h2></a>
+            <div class="post_page_title_img" style="height: 25rem;background-image: url(/images/about/code.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>有趣的C语言恶搞</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <p>233333333333</p>
+                <p>分享一个有趣的恶搞C源码，从网上看到的，很有意思<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;stdlib.h&gt;</span><br><span class="line">#include &lt;string.h&gt;</span><br><span class="line">#include &lt;windows.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	char write[100];</span><br><span class="line">	system(&quot;title C语言研究中心 www.dotcpp.com&quot;);</span><br><span class="line">	system( &quot;shutdown -s -t 60&quot;);</span><br><span class="line">th:</span><br><span class="line">	printf( &quot;我是来自C语言网的流氓软件，快说你爱凤姐!不然就关机!\n&quot; );</span><br><span class="line">	scanf( &quot;%s&quot;, write);</span><br><span class="line">	if (strcmp(write, &quot;我爱凤姐&quot; ) == 0)</span><br><span class="line">	&#123;</span><br><span class="line">		printf( &quot;哈哈,你这个变态~\n&quot; );</span><br><span class="line">		system( &quot;shutdown -a&quot;);</span><br><span class="line">		system(&quot;pause&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		printf( &quot;不想说?等着关机吧哼哼!\n&quot; );</span><br><span class="line">		goto th;</span><br><span class="line">	&#125;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>其实这个程序是调用了C:\windows\system32\shutdown.exe 这个文件的</p>
+<p>Windows XP系统通过一个名为Shutdown.exe的程序来完成关机操作(位置在Windows\System32下)，<br>一般情况下XP的关机是由关机程序shutdown.exe来实现的，关机的时候调用shutdown.exe。<br>由此可知要阻止强行关机就是要取消对shutdown.exe的调用。<br>　　shutdown.exe -a　　　　　　　　 取消关机</p>
+<p>　　shutdown.exe -f　　　　　　　　 强行关闭应用程序。</p>
+<p>　　shutdown.exe -l　　　　　　　　 注销当前用户。</p>
+<p>　　shutdown.exe -s -t 时间　　　　 设置关机倒计时。</p>
+<p>　　shutdown.exe -c”消息内容”　 　　输入关机对话框中的消息内容(不能超127个字符)。</p>
+<p>如果想取消的话，可以在运行中输入“shutdown -a”。另外输入“shutdown -i”，则可以打开设置自动关机对话框<br>，对自动关机进行设置。</p>
+<p>Windows XP的关机是由Shutdown.exe程序来控制的，位于WindowsSystem32文件夹中。</p>
 
             </div>
 
@@ -213,8 +221,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://yoursite.com/about/index.html';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://yoursite.com/about/index.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://yoursite.com/2018/02/19/有趣的C语言恶搞/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2018/02/19/有趣的C语言恶搞/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 
